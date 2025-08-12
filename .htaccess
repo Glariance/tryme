@@ -1,0 +1,3 @@
+# The below needs to add in the .htaccess
+DirectoryIndex public/index.php
+RewriteRule ^ public/index.php [L]
