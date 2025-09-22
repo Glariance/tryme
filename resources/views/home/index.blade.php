@@ -67,82 +67,81 @@
 
 
         /* spinner css */
-.spinner-section {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  padding: 60px 20px;
-}
+        .spinner-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 60px 20px;
+        }
 
-.spinner-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
+        .spinner-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
 
-.spinner-image {
-  flex: 1 1 300px;
-  text-align: center;
-}
+        .spinner-image {
+            flex: 1 1 300px;
+            text-align: center;
+        }
 
-.spinner-image img {
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 5px 25px rgba(160, 106, 16, 0.5);
-}
+        .spinner-image img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(160, 106, 16, 0.5);
+        }
 
-.spinner-content {
-  flex: 1 1 400px;
-}
+        .spinner-content {
+            flex: 1 1 400px;
+        }
 
-.spinner-content h2 {
-  font-size: 32px;
-  color: rgb(160, 106, 16);
-  margin-bottom: 20px;
-}
+        .spinner-content h2 {
+            font-size: 32px;
+            color: rgb(160, 106, 16);
+            margin-bottom: 20px;
+        }
 
-.spinner-content p {
-  font-size: 18px;
-  color: #e0e0e0;
-  line-height: 1.6;
-}
+        .spinner-content p {
+            font-size: 18px;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
 
-.spinner-content strong {
-  color: rgb(160, 106, 16); /* gold/brown for winnings highlight */
-}
+        .spinner-content strong {
+            color: rgb(160, 106, 16);
+            /* gold/brown for winnings highlight */
+        }
 
-.spinner-content a {
-  display: inline-block;
-  margin-top: 25px;
-  background: rgb(160, 106, 16);
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 15px rgba(160, 106, 16, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+        .spinner-content a {
+            display: inline-block;
+            margin-top: 25px;
+            background: rgb(160, 106, 16);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(160, 106, 16, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
 
-.spinner-content a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(160, 106, 16, 0.6);
-}
+        .spinner-content a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(160, 106, 16, 0.6);
+        }
 
-@media (max-width: 768px) {
-  .spinner-container {
-    flex-direction: column;
-  }
+        @media (max-width: 768px) {
+            .spinner-container {
+                flex-direction: column;
+            }
 
-  .spinner-content, .spinner-image {
-    text-align: center;
-  }
-}
-
-
-
+            .spinner-content,
+            .spinner-image {
+                text-align: center;
+            }
+        }
     </style>
 
 
@@ -157,6 +156,7 @@
         <div class="hidden md:flex space-x-8">
             <a href="#home" class="hover:text-accent transition">Home</a>
             <a href="#how-it-works" class="hover:text-accent transition">How It Works</a>
+            <a href="#daily-news" class="hover:text-accent transition">Daily News</a>
             <a href="#spinwin" class="hover:text-accent transition">Spin n Win</a>
             <a href="#features" class="hover:text-accent transition">Features</a>
             <a href="#referral" class="hover:text-accent transition">Referral</a>
@@ -203,7 +203,7 @@
     <section id="home" class="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-12 md:mb-0">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Earn <span class="text-accent">4% Daily</span> From Real Trading Profits
+                Earn <span class="text-accent">4 to 10% Daily</span> From Real Trading Profits
             </h1>
             <p class="text-lg text-gray-300 mb-8">
                 Join our sustainable investment platform powered by professional crypto and forex trading strategies.
@@ -244,6 +244,7 @@
                 </div>
 
                 <!-- Calculator Card -->
+
                 <div class="flex justify-center">
                     <div class="relative w-full max-w-md">
                         <div class="bg-gray-800 rounded-xl shadow-2xl p-6 text-gray-200 floating">
@@ -251,7 +252,101 @@
                             <!-- Header -->
                             <div class="flex justify-between items-center mb-6">
                                 <h3 class="font-bold text-lg text-white">Daily ROI Calculator</h3>
-                                <div class="bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">4% Daily
+                                <div class="bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">4% to 10%
+                                    Daily</div>
+                            </div>
+
+                            <!-- Investment Amount -->
+                            <div class="mb-4">
+                                <label for="investmentAmount" class="block text-gray-400 mb-2">Investment Amount
+                                    ($)</label>
+                                <select id="investmentAmount"
+                                    class="w-full border border-gray-700 bg-gray-900 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <option value="25">25 USD</option>
+                                    <option value="50">50 USD</option>
+                                    <option value="75">75 USD</option>
+                                    <option value="100">100 USD</option>
+                                    <option value="500">500 USD</option>
+                                    <option value="1000">1000 USD</option>
+                                </select>
+                            </div>
+
+                            <!-- Pool Range -->
+                            <div class="mb-4">
+                                <label for="poolRange" class="block text-gray-400 mb-2">Pool Size (select range)</label>
+                                <select id="poolRange"
+                                    class="w-full border border-gray-700 bg-gray-900 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <option value="$10,000 - $25,000" data-percent="4">$10,000 - $25,000</option>
+                                    <option value="$25,000 - $50,000" data-percent="5">$25,000 - $50,000</option>
+                                    <option value="$50,000 - $100,000" data-percent="6">$50,000 - $100,000</option>
+                                    <option value="$100,000 - $150,000" data-percent="7">$100,000 - $150,000</option>
+                                    <option value="$150,000 - $200,000" data-percent="8">$150,000 - $200,000</option>
+                                    <option value="$200,000 - $300,000" data-percent="9">$200,000 - $300,000</option>
+                                    <option value="$300,000+" data-percent="10">$300,000+</option>
+                                </select>
+                            </div>
+
+                            <!-- Pool Info -->
+                            <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                                <div class="flex justify-between">
+                                    <span id="poolRangeLabel" class="text-gray-400">$10,000 - $25,000</span>
+                                    <span id="poolPercentDisplay" class="font-bold text-accent">Daily Profit:
+                                        4%</span>
+                                </div>
+                            </div>
+
+                            <!-- Fixed Period -->
+                            <div class="mb-6">
+                                <div class="flex items-center space-x-2">
+                                    <button class="bg-accent text-white px-4 py-2 rounded-lg font-medium">40
+                                        Days</button>
+                                    <span class="text-gray-400">Fixed Period</span>
+                                </div>
+                            </div>
+
+                            <!-- Results -->
+                            <div class="bg-gray-900 rounded-lg p-4 mb-6">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">Daily ROI</span>
+                                    <span id="dailyROI" class="font-bold text-accent">$0.00</span>
+                                </div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">Total ROI (40 days)</span>
+                                    <span id="totalROI" class="font-bold text-accent">$0.00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Total Return</span>
+                                    <span id="totalReturn" class="font-bold text-green-400">$0.00 (0%)</span>
+                                </div>
+                            </div>
+
+                            <!-- Button -->
+                            <button id="investBtn"
+                                class="w-full bg-accent text-white py-3 rounded-lg font-bold hover:opacity-90 transition">
+                                Invest Now
+                            </button>
+
+                            <!-- Tip -->
+                            <p class="text-gray-500 text-sm mt-3">💡 Tip: Selecting the pool range will update the
+                                daily percentage.</p>
+                        </div>
+
+                        <!-- Extra Glows -->
+                        <div class="absolute -bottom-10 -left-10 w-24 h-24 bg-primary rounded-full opacity-20"></div>
+                        <div class="absolute -top-10 -right-10 w-20 h-20 bg-yellow-400 rounded-full opacity-20"></div>
+                    </div>
+                </div>
+
+
+
+                {{-- <div class="flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="bg-gray-800 rounded-xl shadow-2xl p-6 text-gray-200 floating">
+
+                            <!-- Header -->
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 class="font-bold text-lg text-white">Daily ROI Calculator</h3>
+                                <div class="bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">4 to 10% Daily
                                 </div>
                             </div>
 
@@ -303,7 +398,8 @@
                         <div class="absolute -bottom-10 -left-10 w-24 h-24 bg-primary rounded-full opacity-20"></div>
                         <div class="absolute -top-10 -right-10 w-20 h-20 bg-yellow-400 rounded-full opacity-20"></div>
                     </div>
-                </div>
+                </div> --}}
+
             </div>
         </div>
 
@@ -312,82 +408,115 @@
 
     <!-- How It Works Section -->
 
-
     <div class="mt-16 bg-gray-900 rounded-xl shadow-lg overflow-hidden" id="how-it-works">
-        <div class="md:flex">
+        <div class="md:flex items-stretch">
 
-            <!-- Left Text Content -->
-            <div class="md:w-1/2 p-8 md:p-12 text-white">
+            <!-- LEFT SIDE -->
+            <div class="md:w-1/2 p-8 md:p-12 text-white flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold mb-4" style="color: rgb(160, 106, 16);">
+                        How Our Crypto & Forex Pool Works
+                    </h2>
+                    <p class="text-gray-300 mb-6">
+                        We've launched a smart Crypto + Forex Trading Pool starting with our own capital of $10,000.
+                        Our professional trading team actively trades assets like Bitcoin (BTC), Ethereum (ETH), Solana
+                        (SOL),
+                        Dogecoin (DOGE), and in the Gold Forex Market.
+                    </p>
 
-                <h3 class="text-2xl font-bold mb-4">Introduction: How the System Work</h3>
-                <p class="text-gray-300 mb-6">
-                    This platform offers users a fixed-return investment opportunity based on real-time trading profits.
-                    All daily ROI (Return on Investment) and user rewards are funded directly from active crypto/forex
-                    trading activities conducted by the platform. Users invest via predefined packages, earn daily ROI,
-                    and receive additional rewards via a referral system.
+                    <p class="text-gray-300 mb-6">
+                        Profits from these trades are shared daily with our investors based on the pool's total size.
+                        The more the pool grows, the higher the daily profit percentage becomes.
+                    </p>
+
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Daily Profit Structure</h3>
+                    <table class="w-full text-left border-collapse rounded-lg overflow-hidden shadow-lg mb-6">
+                        <thead>
+                            <tr class="bg-gray-800 text-yellow-400">
+                                <th class="px-4 py-2 border-l-4 border-yellow-500">Pool Size</th>
+                                <th class="px-4 py-2">Daily Profit</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr class="bg-gray-900 hover:bg-gray-800">
+                                <td class="px-4 py-2 border-l-4 border-yellow-500">$10,000 - $25,000</td>
+                                <td class="px-4 py-2">4%</td>
+                            </tr>
+                            <tr class="bg-gray-800 hover:bg-gray-700">
+                                <td class="px-4 py-2 border-l-4 border-yellow-500">$25,000 - $50,000</td>
+                                <td class="px-4 py-2">5%</td>
+                            </tr>
+                            <tr class="bg-gray-900 hover:bg-gray-800">
+                                <td class="px-4 py-2 border-l-4 border-yellow-500">$50,000 - $100,000</td>
+                                <td class="px-4 py-2">6%</td>
+                            </tr>
+                            <tr class="bg-gray-800 hover:bg-gray-700">
+                                <td class="px-4 py-2 border-l-4 border-yellow-500">$100,000 - $150,000</td>
+                                <td class="px-4 py-2">7%</td>
+                            </tr>
+                            <tr class="bg-gray-900 hover:bg-gray-800">
+                                <td class="px-4 py-2 border-l-4 border-yellow-500">$150,000 - $200,000</td>
+                                <td class="px-4 py-2">8%</td>
+                            </tr>
+                            <tr class="bg-gray-800 hover:bg-gray-700">
+                                <td class="px-4 py-2 border-l-4 border-yellow-500">$200,000 - $300,000</td>
+                                <td class="px-4 py-2">9%</td>
+                            </tr>
+                            <tr class="bg-gray-900 hover:bg-gray-800">
+                                <td class="px-4 py-2 border-l-4 border-yellow-500">$300,000 - $400,000+</td>
+                                <td class="px-4 py-2">10%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-gray-300">
+                    Our system is designed to reward long-term participation and pool growth.
+                    Whether you're starting with just $25 or investing a larger amount, your funds are
+                    professionally managed in real-time markets to generate consistent daily returns.
                 </p>
-
-                <h3 class="text-2xl font-bold mb-4">Trading-Based Revenue Generation</h3>
-                <p class="text-gray-300 mb-6">Our platform does not rely on external capital inflows or unsustainable
-                    yield generation models.</p>
-
-                <h3 class="text-2xl font-bold mb-4">Instead, all profits and ROI payouts are generated directly from
-                    real-time trading activities conducted by our internal trading desk, leveraging:</h3>
-                <p class="text-gray-300 mb-6">Spot and Futures Crypto Trading
-                    Short-term Scalping
-                    Forex Arbitrage Strategies
-                    Risk-managed Portfolio Rotations
-                </p>
-
-                <h3 class="text-2xl font-bold mb-4">This ensures:</h3>
-                <p class="text-gray-300 mb-6">Sustainability of the ROI model
-                    Legitimate, audited trading profits backing daily payouts
-                    Transparent system integrity and long-term operation</p>
-
-
-                {{-- <ul class="space-y-3">
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
-                        <span>Crypto spot and futures trading</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
-                        <span>Forex arbitrage strategies</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
-                        <span>Risk-managed portfolio rotations</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
-                        <span>Short-term scalping techniques</span>
-                    </li>
-                </ul> --}}
             </div>
 
-            <!-- Right Charts Grid -->
+
+            <!-- RIGHT SIDE -->
             <div class="md:w-1/2 bg-gray-800 p-6">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="bg-white rounded-lg shadow-lg p-3">
-                        <div id="tradingview_chart"></div>
+                    <div class="bg-gray-900 rounded-lg border border-gray-700 shadow-lg p-3">
+                        <iframe
+                            src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_btc&symbol=BINANCE:BTCUSDT&interval=60&theme=dark"
+                            width="100%" height="250"></iframe>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-3">
-                        <div id="tradingview_sol_chart"></div>
+                    <div class="bg-gray-900 rounded-lg border border-gray-700 shadow-lg p-3">
+                        <iframe
+                            src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_eth&symbol=BINANCE:ETHUSDT&interval=60&theme=dark"
+                            width="100%" height="250"></iframe>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-3">
-                        <div id="tradingview_eth_chart"></div>
+                    <div class="bg-gray-900 rounded-lg border border-gray-700 shadow-lg p-3">
+                        <iframe
+                            src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_sol&symbol=BINANCE:SOLUSDT&interval=60&theme=dark"
+                            width="100%" height="250"></iframe>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-3">
-                        <div id="tradingview_doge_chart"></div>
+                    <div class="bg-gray-900 rounded-lg border border-gray-700 shadow-lg p-3">
+                        <iframe
+                            src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_doge&symbol=BINANCE:DOGEUSDT&interval=60&theme=dark"
+                            width="100%" height="250"></iframe>
+                    </div>
+                    <div class="bg-gray-900 rounded-lg border border-gray-700 shadow-lg p-3 sm:col-span-2">
+                        <iframe
+                            src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_gold&symbol=OANDA:XAUUSD&interval=60&theme=dark"
+                            width="100%" height="250"></iframe>
                     </div>
                 </div>
             </div>
 
+
         </div>
     </div>
 
+
+
     <!-- TradingView Script -->
-    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    {{-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script>
         const charts = [{
                 id: "tradingview_chart",
@@ -426,7 +555,7 @@
                 container_id: chart.id
             });
         });
-    </script>
+    </script> --}}
 
 
 
@@ -478,7 +607,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2">Choose Your Package</h3>
                     <p class="text-gray-300">Select from our range of investment packages starting at just $25. Each
-                        offers 4% daily ROI for 40 days.</p>
+                        offers 4 to 10% daily ROI for 40 days.</p>
                 </div>
                 <div class="glass-card p-6 rounded-xl hover:translate-y-2 transition">
                     <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
@@ -493,12 +622,85 @@
                         <i class="fas fa-lock text-2xl text-accent"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Earn Daily & Withdraw</h3>
-                    <p class="text-gray-300">Withdraw your 4% daily ROI within 24 hours. Earn 160% total return over 40
+                    <p class="text-gray-300">Withdraw your 4 to 10% daily ROI within 24 hours. Earn 160% total return
+                        over 40
                         days.</p>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+    <!-- Economic News Impact Section -->
+    <section class="w-full bg-gray-800 py-12 px-6 md:px-16 text-gray-200" id="daily-news">
+        <!-- Heading -->
+        <div class="mt-16 bg-gray-900 rounded-xl shadow-lg overflow-hidden">
+            <div class="md:flex items-stretch">
+
+                <!-- Left Text Content -->
+                <div class="md:w-1/2 p-8 md:p-12 text-white">
+                    <h3 class="text-3xl font-bold mb-6">How Daily Global News Impacts Trading</h3>
+
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        In financial markets, <span class="text-accent font-semibold">news is power</span>.
+                        Major economic events such as <span class="text-white">interest rate decisions</span>,
+                        <span class="text-white">inflation reports</span>, <span class="text-white">employment
+                            data</span>,
+                        or <span class="text-white">geopolitical developments</span> significantly affect market
+                        volatility.
+                        For traders in <strong class="text-accent">crypto, forex, commodities, or indices</strong>,
+                        even a single press release can shift market sentiment instantly.
+                    </p>
+
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Every day, traders monitor global news to assess how events might affect price movements.
+                        For example:
+                    </p>
+
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                        <li><strong class="text-white">Interest Rate Hikes</strong> from central banks usually
+                            strengthen the local currency.</li>
+                        <li><strong class="text-white">High Unemployment Data</strong> can weaken market confidence.
+                        </li>
+                        <li><strong class="text-white">Crypto regulation announcements</strong> can cause sudden spikes
+                            or crashes in Bitcoin and altcoins.</li>
+                    </ul>
+
+                    <p class="text-gray-300 leading-relaxed">
+                        That's why it's essential to stay updated with day-to-day economic events.
+                        Below is a live calendar showing <strong class="text-accent">real-time global news</strong>
+                        that directly influences trading activity.
+                    </p>
+                </div>
+
+                <!-- Right Widget (same height as left) -->
+                <div class="md:w-1/2 bg-gray-800 p-6 flex">
+                    <div
+                        class="bg-gray-900 rounded-lg border border-gray-700 overflow-hidden shadow-lg w-full flex flex-col">
+                        <div class="tradingview-widget-container w-full flex-grow">
+                            <div class="tradingview-widget-container__widget h-full"></div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+                                {
+                                    "colorTheme": "dark",
+                                    "isTransparent": false,
+                                    "width": "100%",
+                                    "height": "100%",
+                                    "locale": "en",
+                                    "importanceFilter": "0,1,2"
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+
 
 
 
@@ -562,7 +764,7 @@
                 <h2 class="text-3xl font-bold text-yellow-400 mb-4">Investment Packages</h2>
                 <p class="text-gray-300 max-w-2xl mx-auto">
                     Choose from our range of packages with guaranteed
-                    <span class="text-yellow-400 font-semibold">4% daily returns</span> for 40 days.
+                    <span class="text-yellow-400 font-semibold">4 to 10% daily returns</span> for 40 days.
                 </p>
             </div>
 
@@ -577,7 +779,8 @@
                         <div class="text-4xl font-bold text-white">$25</div>
                     </div>
                     <ul class="space-y-3 mb-6 text-gray-300">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>4% Daily
+                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>4 to 10%
+                            Daily
                             ROI ($1/day)</li>
                         <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>40 Days
                             Duration</li>
@@ -607,7 +810,8 @@
                         <div class="text-4xl font-bold text-white">$50</div>
                     </div>
                     <ul class="space-y-3 mb-6 text-gray-300">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>4% Daily
+                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>4 to 10%
+                            Daily
                             ROI ($2/day)</li>
                         <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>40 Days
                             Duration</li>
@@ -634,7 +838,8 @@
                         <div class="text-4xl font-bold text-white">$75</div>
                     </div>
                     <ul class="space-y-3 mb-6 text-gray-300">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>4% Daily
+                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>4 to 10%
+                            Daily
                             ROI ($3/day)</li>
                         <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>40 Days
                             Duration</li>
@@ -661,7 +866,8 @@
                         <div class="text-4xl font-bold text-white">$100</div>
                     </div>
                     <ul class="space-y-3 mb-6 text-gray-300">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>4% Daily
+                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>4 to 10%
+                            Daily
                             ROI ($4/day)</li>
                         <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>40 Days
                             Duration</li>
@@ -688,7 +894,8 @@
                         <div class="text-4xl font-bold text-white">$500</div>
                     </div>
                     <ul class="space-y-3 mb-6 text-gray-300">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>4% Daily
+                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>4 to 10%
+                            Daily
                             ROI ($20/day)</li>
                         <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>40 Days
                             Duration</li>
@@ -715,8 +922,8 @@
                         <div class="text-4xl font-bold text-white">$1000</div>
                     </div>
                     <ul class="space-y-3 mb-6 text-gray-300">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>4% Daily
-                            ROI ($40/day)</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>4 to 10%
+                            Daily ROI ($40/day)</li>
                         <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>40 Days
                             Duration</li>
                         <li class="flex items-center"><i class="fas fa-check-circle text-yellow-400 mr-2"></i>Total
@@ -741,9 +948,9 @@
             </div>
 
             <!-- View All -->
-            <div class="mt-8 text-center">
+            {{-- <div class="mt-8 text-center">
                 <button class="text-yellow-400 font-semibold hover:underline">View All Packages</button>
-            </div>
+            </div> --}}
         </div>
     </section>
 
@@ -978,7 +1185,8 @@
                         <i class="fas fa-chevron-down text-gray-300"></i>
                     </div>
                     <div class="mt-4 text-gray-300 faq-answer">
-                        Our platform allows users to invest in predefined packages and earn a fixed 4% daily ROI. These
+                        Our platform allows users to invest in predefined packages and earn a fixed 4 to 10% daily ROI.
+                        These
                         returns are generated from live trading activities such as crypto spot/futures trading,
                         scalping, and forex arbitrage. Users also benefit from a one-time referral commission system
                         when they invite others to join.
@@ -1657,7 +1865,8 @@
                         <img src="{{ asset('assets/images/logo.png') }}" alt="logo" class="w-20 h-auto">
                     </div>
                     <p class="text-gray-300">
-                        Earn 4% Daily From Real Trading Profits Join our sustainable investment platform powered by
+                        Earn 4 to 10% Daily From Real Trading Profits Join our sustainable investment platform powered
+                        by
                         professional crypto and forex trading strategies.
                     </p>
 
@@ -1978,32 +2187,32 @@
         });
 
         // Investment calculator logic
-        investmentAmount.addEventListener('input', updateCalculator);
-        investmentPeriod.addEventListener('input', updateCalculator);
-        referralCount.addEventListener('input', updateCalculator);
+        // investmentAmount.addEventListener('input', updateCalculator);
+        // investmentPeriod.addEventListener('input', updateCalculator);
+        // referralCount.addEventListener('input', updateCalculator);
 
-        function updateCalculator() {
-            const amount = parseFloat(investmentAmount.value);
-            const period = parseInt(investmentPeriod.value);
-            const referrals = parseInt(referralCount.value);
+        // function updateCalculator() {
+        //     const amount = parseFloat(investmentAmount.value);
+        //     const period = parseInt(investmentPeriod.value);
+        //     const referrals = parseInt(referralCount.value);
 
-            currentAmount.textContent = `$${amount}`;
-            currentPeriod.textContent = `${period} days`;
-            currentReferrals.textContent = referrals;
+        //     currentAmount.textContent = `$${amount}`;
+        //     currentPeriod.textContent = `${period} days`;
+        //     currentReferrals.textContent = referrals;
 
-            const daily = amount * 0.02;
-            const total = daily * period;
-            const refIncome = amount * referrals * 0.01;
-            const totalEarn = total + refIncome;
+        //     const daily = amount * 0.02;
+        //     const total = daily * period;
+        //     const refIncome = amount * referrals * 0.01;
+        //     const totalEarn = total + refIncome;
 
-            dailyRoi.textContent = `$${daily.toFixed(2)}`;
-            totalRoi.textContent = `$${total.toFixed(2)}`;
-            referralIncome.textContent = `$${refIncome.toFixed(2)}`;
-            totalEarnings.textContent = `$${totalEarn.toFixed(2)}`;
-        }
+        //     dailyRoi.textContent = `$${daily.toFixed(2)}`;
+        //     totalRoi.textContent = `$${total.toFixed(2)}`;
+        //     referralIncome.textContent = `$${refIncome.toFixed(2)}`;
+        //     totalEarnings.textContent = `$${totalEarn.toFixed(2)}`;
+        // }
+        // updateCalculator();
 
-        // Initialize calculator
-        updateCalculator();
+
 
         // Update dashboard data
         function updateDashboard() {
@@ -2107,26 +2316,93 @@
     </script>
 
     <script>
-        // ROI Calculator
-        const investmentInput = document.getElementById('investment-amount');
-        const dailyRoiDisplay = document.getElementById('daily-roi');
-        const totalRoiDisplay = document.getElementById('total-roi');
-        const totalReturnDisplay = document.getElementById('total-return');
+        //  Calculator Start
 
-        investmentInput.addEventListener('input', updateRoiCalculation);
-
-        function updateRoiCalculation() {
-            const amount = parseFloat(investmentInput.value) || 25;
-            const dailyRoi = amount * 0.04;
-            const totalRoi = dailyRoi * 40;
-
-            dailyRoiDisplay.textContent = '$' + dailyRoi.toFixed(2);
-            totalRoiDisplay.textContent = '$' + totalRoi.toFixed(2);
-            totalReturnDisplay.textContent = '$' + totalRoi.toFixed(2) + ' (160%)';
+        // Helper: format currency
+        function formatCurrency(val) {
+            return '$' + Number(val).toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
         }
 
+        // Elements
+        const investmentEl = document.getElementById('investmentAmount');
+        const poolRangeEl = document.getElementById('poolRange');
+        const poolPercentDisplay = document.getElementById('poolPercentDisplay');
+        const poolRangeLabel = document.getElementById('poolRangeLabel');
+        const dailyROIEl = document.getElementById('dailyROI');
+        const totalROIEl = document.getElementById('totalROI');
+        const totalReturnEl = document.getElementById('totalReturn');
+
+        // Get selected pool %
+        function getSelectedPoolPercent() {
+            const opt = poolRangeEl.selectedOptions[0];
+            const pct = parseFloat(opt.dataset.percent);
+            return isFinite(pct) ? pct : 0;
+        }
+
+        // Update pool info
+        function updatePoolDisplay() {
+            const opt = poolRangeEl.selectedOptions[0];
+            poolRangeLabel.textContent = opt.value;
+            const pct = getSelectedPoolPercent();
+            poolPercentDisplay.textContent = 'Daily Profit: ' + pct + '%';
+        }
+
+        // Calculate ROI
+        function calculateROI() {
+            const investment = parseFloat(investmentEl.value) || 0;
+            const percent = getSelectedPoolPercent();
+            const dailyROI = (investment * percent) / 100;
+            const totalROI = dailyROI * 40;
+            const totalReturn = totalROI; // ✅ ROI only
+            const totalPercent = (totalROI / (investment || 1)) * 100;
+
+            dailyROIEl.textContent = formatCurrency(dailyROI);
+            totalROIEl.textContent = formatCurrency(totalROI);
+            totalReturnEl.textContent = formatCurrency(totalReturn) + ' (' + totalPercent.toFixed(0) + '%)';
+        }
+
+        // Events
+        investmentEl.addEventListener('change', calculateROI);
+        investmentEl.addEventListener('input', calculateROI);
+        poolRangeEl.addEventListener('change', () => {
+            updatePoolDisplay();
+            calculateROI();
+        });
+        document.getElementById('investBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            calculateROI();
+            alert('Calculation updated — check the results above.');
+        });
+
+        // Init
+        updatePoolDisplay();
+        calculateROI();
+
+        //  Calculator End
+
+        // ROI Calculator
+        // const investmentInput = document.getElementById('investment-amount');
+        // const dailyRoiDisplay = document.getElementById('daily-roi');
+        // const totalRoiDisplay = document.getElementById('total-roi');
+        // const totalReturnDisplay = document.getElementById('total-return');
+
+        // investmentInput.addEventListener('input', updateRoiCalculation);
+
+        // function updateRoiCalculation() {
+        //     const amount = parseFloat(investmentInput.value) || 25;
+        //     const dailyRoi = amount * 0.04;
+        //     const totalRoi = dailyRoi * 40;
+
+        //     dailyRoiDisplay.textContent = '$' + dailyRoi.toFixed(2);
+        //     totalRoiDisplay.textContent = '$' + totalRoi.toFixed(2);
+        //     totalReturnDisplay.textContent = '$' + totalRoi.toFixed(2) + ' (160%)';
+        // }
+
         // Initialize calculator
-        updateRoiCalculation();
+        // updateRoiCalculation();
 
         // FAQ Toggle
         function toggleFAQ(num) {

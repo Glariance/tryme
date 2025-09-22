@@ -44,8 +44,9 @@
 
     <style>
         .gradient-bg {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
         }
+
 
         .spinner {
             width: 300px;
@@ -60,54 +61,14 @@
             position: relative;
             border-radius: 50%;
             overflow: hidden;
-            border: 8px solid #1a1a2e;
-            /* dark border */
+            border: 8px solid #0f172a;
             box-shadow:
                 0 0 0 8px #6d28d9,
-                /* purple glow */
-                0 0 30px rgba(109, 40, 217, 0.6),
-                0 0 50px rgba(0, 212, 255, 0.4);
+                0 0 30px rgba(109, 40, 217, 0.8),
+                0 0 60px rgba(59, 130, 246, 0.7),
+                0 0 100px rgba(56, 189, 248, 0.5);
             transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99);
             transform: rotate(0deg);
-        }
-
-        .spinner-arrow {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #fbbf24;
-            /* gold arrow */
-            font-size: 40px;
-            z-index: 10;
-            text-shadow: 0 0 10px rgba(251, 191, 36, 0.7);
-        }
-
-        .spinner-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #6d28d9, #3b82f6);
-            color: #fff;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 10;
-            box-shadow: 0 0 15px rgba(109, 40, 217, 0.8);
-            transition: all 0.3s ease;
-        }
-
-        .spinner-button:hover {
-            transform: translate(-50%, -50%) scale(1.05);
-            box-shadow: 0 0 25px rgba(59, 130, 246, 0.9);
-        }
-
-        .spinner-button:active {
-            transform: translate(-50%, -50%) scale(0.95);
         }
 
         .spinner-item {
@@ -118,50 +79,103 @@
             left: 50%;
             transform-origin: 0% 0%;
             transform: rotate(var(--rotate));
-            background: var(--bg, #4f46e5);
             clip-path: polygon(0 0, 100% 0, 100% 100%);
             display: flex;
             align-items: center;
             justify-content: flex-end;
             padding-right: 25px;
-            /* increased so text moves inward and is fully visible */
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                0 0 20px rgba(255, 255, 255, 0.6);
+        }
+
+        /* 🎨 Multicolor gradient segments */
+        .spinner-item:nth-child(1) {
+            background: linear-gradient(135deg, #ff4d4d, #ff9900);
+        }
+
+        .spinner-item:nth-child(2) {
+            background: linear-gradient(135deg, #ff9900, #ffee00);
+        }
+
+        .spinner-item:nth-child(3) {
+            background: linear-gradient(135deg, #ffee00, #33cc33);
+        }
+
+        .spinner-item:nth-child(4) {
+            background: linear-gradient(135deg, #33cc33, #0099ff);
+        }
+
+        .spinner-item:nth-child(5) {
+            background: linear-gradient(135deg, #0099ff, #6633cc);
+        }
+
+        .spinner-item:nth-child(6) {
+            background: linear-gradient(135deg, #6633cc, #cc33ff);
+        }
+
+        .spinner-item:nth-child(7) {
+            background: linear-gradient(135deg, #cc33ff, #ff3399);
+        }
+
+        .spinner-item:nth-child(8) {
+            background: linear-gradient(135deg, #ff3399, #ff4d4d);
         }
 
         .spinner-item span {
             transform: rotate(calc(-1 * var(--rotate)));
-            display: inline-block;
-            font-size: 1.2rem;
-            font-weight: bold;
+        }
+
+        .spinner-arrow {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #38bdf8;
+            font-size: 40px;
+            z-index: 10;
+            text-shadow: 0 0 15px rgba(56, 189, 248, 0.9),
+                0 0 25px rgba(59, 130, 246, 0.8);
+        }
+
+        .spinner-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6d28d9, #3b82f6);
             color: #fff;
-            text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 0 15px rgba(109, 40, 217, 0.9),
+                0 0 30px rgba(59, 130, 246, 0.8);
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
         }
 
-
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .coin-spin {
-            animation: spin 10s linear infinite;
-        }
-
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
+        .spinner-button:hover {
+            transform: translate(-50%, -50%) scale(1.08);
+            box-shadow: 0 0 25px rgba(109, 40, 217, 1),
+                0 0 40px rgba(59, 130, 246, 0.9);
         }
     </style>
 
 
+
 </head>
+
+
+
+
+
+
 
 <body class="gradient-bg text-white min-h-screen font-sans">
 
@@ -212,29 +226,35 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     ">
-         Congratulations! You won $0 signup bonus!
+            Congratulations! You won $0 signup bonus!
         </h1>
 
 
         {{-- Cards --}}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <!-- Total Invested -->
-            <div class="rounded-xl p-6 shadow-lg hover:shadow-xl transition"
-                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 2px solid #a0522d;">
+            <div class="rounded-xl p-6 transition"
+                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 2px solid #a0522d;
+            box-shadow: 0 0 15px 3px rgba(160, 82, 45, 0.35);">
                 <div class="flex items-center justify-between">
                     <div>
-                        <div class="text-brown-400 text-sm mb-1 font-medium">Total Invested</div>
-                        <div class="text-2xl font-bold text-brown-300" id="user-invested">$0.00</div>
+                        <div class="text-sm mb-1 font-medium" style="color: #a0522d;">Total Invested</div>
+                        <div class="text-2xl font-bold" id="user-invested" style="color: #a0522d;">$0.00</div>
                     </div>
-                    <div class="text-brown-300 text-3xl">
+                    <div class="text-3xl" style="color: #a0522d;">
                         <i class="fas fa-wallet"></i>
                     </div>
                 </div>
             </div>
 
+
+
             <!-- ROI Balance -->
-            <div class="rounded-xl p-6 shadow-lg hover:shadow-xl transition"
-                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 2px solid #22c55e;">
+            <div class="rounded-xl p-6 transition"
+                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+               border: 2px solid #22c55e;
+               box-shadow: 0 0 15px 3px rgba(34, 197, 94, 0.35);">
                 <div class="flex items-center justify-between">
                     <div>
                         <div class="text-green-400 text-sm mb-1 font-medium">ROI Balance</div>
@@ -247,8 +267,10 @@
             </div>
 
             <!-- Referral Earnings -->
-            <div class="rounded-xl p-6 shadow-lg hover:shadow-xl transition"
-                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 2px solid #a855f7;">
+            <div class="rounded-xl p-6 transition"
+                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+               border: 2px solid #a855f7;
+               box-shadow: 0 0 15px 3px rgba(168, 85, 247, 0.35);">
                 <div class="flex items-center justify-between">
                     <div>
                         <div class="text-purple-400 text-sm mb-1 font-medium">Referral Earnings</div>
@@ -261,8 +283,10 @@
             </div>
 
             <!-- Available to Withdraw -->
-            <div class="rounded-xl p-6 shadow-lg hover:shadow-xl transition"
-                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 2px solid #facc15;">
+            <div class="rounded-xl p-6 transition"
+                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+               border: 2px solid #facc15;
+               box-shadow: 0 0 15px 3px rgba(250, 204, 21, 0.35);">
                 <div class="flex items-center justify-between">
                     <div>
                         <div class="text-yellow-400 text-sm mb-1 font-medium">Available to Withdraw</div>
@@ -279,8 +303,11 @@
 
         {{-- Deposid section --}}
         <div id="invest" class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div class="dashboard-card rounded-xl p-6"
-                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 2px solid #4f8ef7;">
+            <!-- Deposit Addresses -->
+            <div class="dashboard-card rounded-xl p-6 shadow-lg transition"
+                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+               border: 2px solid #4f8ef7;
+               box-shadow: 0 0 20px rgba(79, 142, 247, 0.6);">
                 <h2 class="text-xl font-bold mb-4 flex items-center text-blue-400">
                     <i class="fas fa-qrcode mr-2"></i> Your Deposit Addresses
                 </h2>
@@ -297,7 +324,6 @@
                             <code class="wallet-address text-sm text-blue-200"
                                 id="trc20-address">0x000000000000000000000000000000000</code>
                         </div>
-                        {{-- <p class="text-xs text-blue-300 mt-1">Minimum deposit: $10 USDT</p> --}}
                     </div>
                     <div>
                         <div class="flex items-center justify-between mb-2">
@@ -309,13 +335,9 @@
                         </div>
                         <div class="p-3 rounded-lg" style="background-color: #121627;">
                             <code class="wallet-address text-sm text-blue-200"
-                                id="bep20-address">0x000000000000000000000000000000000
-                            </code>
+                                id="bep20-address">0x000000000000000000000000000000000</code>
                         </div>
-                        {{-- <p class="text-xs text-blue-300 mt-1">Minimum deposit: $10 USDT</p> --}}
                     </div>
-
-
 
                     <div class="pt-4">
                         <button onclick="toggleDepositModal()"
@@ -326,8 +348,11 @@
                 </div>
             </div>
 
-            <div class="dashboard-card rounded-xl p-6"
-                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 2px solid #9b59b6;">
+            <!-- Referral Link -->
+            <div class="dashboard-card rounded-xl p-6 shadow-lg transition"
+                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+               border: 2px solid #9b59b6;
+               box-shadow: 0 0 20px rgba(155, 89, 182, 0.6);">
                 <h2 class="text-xl font-bold mb-4 flex items-center text-purple-400">
                     <i class="fas fa-user-plus mr-2"></i> Your Referral Link
                 </h2>
@@ -364,11 +389,9 @@
                 </div>
 
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
-
-
             </div>
         </div>
+
 
         <div class="grid md:grid-cols-3 gap-6 mb-8">
             {{-- BTC Widget --}}
@@ -420,8 +443,8 @@
             {{-- DOGE Widget --}}
             <div class="rounded-xl p-4 shadow-sm"
                 style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            border: 2px solid #4f8ef7;
-            box-shadow: 0 0 15px 3px rgba(79, 142, 247, 0.35);">
+        border: 2px solid #4f8ef7;
+        box-shadow: 0 0 15px 3px rgba(79, 142, 247, 0.35);">
                 <div class="tradingview-widget-container"
                     style="width: 100%; height: 220px; background: #121627; border-radius: 12px; overflow: hidden;">
                     <iframe scrolling="no" allowtransparency="true" frameborder="0"
@@ -431,9 +454,25 @@
                 </div>
             </div>
 
+            {{-- Gold Widget --}}
+            <div class="rounded-xl p-4 shadow-sm"
+                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        border: 2px solid #4f8ef7;
+        box-shadow: 0 0 15px 3px rgba(79, 142, 247, 0.35);">
+                <div class="tradingview-widget-container"
+                    style="width: 100%; height: 220px; background: #121627; border-radius: 12px; overflow: hidden;">
+                    <iframe scrolling="no" allowtransparency="true" frameborder="0"
+                        src="https://www.tradingview-widget.com/embed-widget/mini-symbol-overview/?locale=en#%7B%22symbol%22%3A%22OANDA%3AXAUUSD%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A220%2C%22dateRange%22%3A%2212M%22%2C%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Afalse%2C%22autosize%22%3Atrue%7D"
+                        title="Gold Market Chart" lang="en"
+                        style="user-select: none; box-sizing: border-box; display: block; height: 100%; width: 100%; border-radius: 12px;"></iframe>
+                </div>
+            </div>
+
             {{-- Referral Stats --}}
             <div class="p-6 rounded-xl"
-                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 2px solid #4f8ef7; box-shadow: 0 4px 20px rgba(79, 142, 247, 0.3);">
+                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        border: 2px solid #4f8ef7;
+        box-shadow: 0 4px 20px rgba(79, 142, 247, 0.3);">
                 <h3 class="text-lg font-bold mb-4 text-blue-400">Referral Stats</h3>
                 <div class="space-y-3 text-blue-200">
                     <div class="flex justify-between">
@@ -447,19 +486,8 @@
                 </div>
             </div>
 
-            {{-- <div class="p-6 rounded-xl"
-                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 2px solid #4f8ef7; box-shadow: 0 4px 20px rgba(79, 142, 247, 0.3);">
-                <h3 class="text-lg font-bold mb-4 text-blue-400">Wallet Address</h3>
-                <div class="flex items-center bg-[#121627] rounded-lg p-3 mb-4">
-                    <div class="truncate flex-1 text-blue-200" id="walletAddress">0x000...0000</div>
-                    <button class="text-blue-400 ml-2" id="copyAddress" aria-label="Copy wallet address">
-                        <i class="far fa-copy"></i>
-                    </button>
-                </div>
-                <div class="text-sm text-blue-300">Connected with MetaMask</div>
-            </div> --}}
-
         </div>
+
 
 
 
@@ -510,6 +538,86 @@
                 </div>
             </div>
             --}}
+
+
+        <!-- Economic News Impact Section -->
+        <section class="w-full py-12 px-0 text-gray-200">
+            <!-- Heading -->
+            <div id="news-impact" class="rounded-none p-6 md:p-12"
+                style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+               border-top: 3px solid #a855f7;
+               border-bottom: 3px solid #a855f7;
+               box-shadow: 0 0 25px 6px rgba(168, 85, 247, 0.45);">
+
+                <div class="md:flex items-stretch max-w-7xl mx-auto">
+                    <!-- Left Text Content -->
+                    <div class="md:w-1/2 p-8 md:p-12 text-white">
+                        <h3 class="text-3xl font-bold mb-6 flex items-center">
+                            <i class="fas fa-newspaper mr-2" style="color:#a855f7;"></i>
+                            How Daily Global News Impacts Trading
+                        </h3>
+
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            In financial markets, <span style="color:#a855f7;" class="font-semibold">news is
+                                power</span>.
+                            Major economic events such as <span class="text-white">interest rate decisions</span>,
+                            <span class="text-white">inflation reports</span>,
+                            <span class="text-white">employment data</span>,
+                            or <span class="text-white">geopolitical developments</span> significantly affect market
+                            volatility.
+                            For traders in <strong style="color:#a855f7;">crypto, forex, commodities, or
+                                indices</strong>,
+                            even a single press release can shift market sentiment instantly.
+                        </p>
+
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            Every day, traders monitor global news to assess how events might affect price movements.
+                            For example:
+                        </p>
+
+                        <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                            <li><strong class="text-white">Interest Rate Hikes</strong> from central banks usually
+                                strengthen the local currency.</li>
+                            <li><strong class="text-white">High Unemployment Data</strong> can weaken market
+                                confidence.</li>
+                            <li><strong class="text-white">Crypto regulation announcements</strong> can cause sudden
+                                spikes or crashes in Bitcoin and altcoins.</li>
+                        </ul>
+
+                        <p class="text-gray-300 leading-relaxed">
+                            That's why it's essential to stay updated with day-to-day economic events.
+                            Below is a live calendar showing <strong style="color:#a855f7;">real-time global
+                                news</strong>
+                            that directly influences trading activity.
+                        </p>
+                    </div>
+
+                    <!-- Right Widget (same height as left) -->
+                    <div class="md:w-1/2 p-6 flex">
+                        <div class="rounded-lg w-full flex flex-col"
+                            style="background: #0d1117;
+                           border: 2px solid #a855f7;
+                           box-shadow: 0 0 20px 5px rgba(168, 85, 247, 0.45);">
+
+                            <div class="tradingview-widget-container w-full flex-grow">
+                                <div class="tradingview-widget-container__widget h-full"></div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+                                    {
+                                        "colorTheme": "dark",
+                                        "isTransparent": false,
+                                        "width": "100%",
+                                        "height": "100%",
+                                        "locale": "en",
+                                        "importanceFilter": "0,1,2"
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
 
         {{-- Your Referral Network --}}
@@ -738,41 +846,39 @@
 
     {{-- Spinner Modal --}}
     <div id="spinnerModal" class="fixed inset-0 z-50 flex items-center justify-center">
+        <!-- Keep translucent dark overlay so website shows behind -->
         <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-        <div class="bg-white rounded-xl shadow-2xl relative z-10 w-full max-w-md mx-4 p-8">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-gray-800 mb-2">Welcome to TryMe!</h2>
-                <p class="text-gray-600">Spin the wheel to claim your signup bonus</p>
+
+        <!-- Only the modal box has #10172D -->
+        <div class="bg-[#10172D] rounded-xl shadow-2xl relative z-10 w-full max-w-md mx-4 p-8 text-center text-white">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-2 text-white glow-text">Welcome to TryMe!</h2>
+                <p class="text-white glow-text">Spin the wheel to claim your signup bonus</p>
             </div>
-
-
-
 
             <div class="spinner">
                 <div class="spinner-arrow">
                     <i class="fas fa-caret-down"></i>
                 </div>
                 <div class="spinner-wheel" id="spinnerWheel">
-
-                    <div class="spinner-item" style="--rotate: 0deg; --bg:#4f46e5;"><span>$1</span></div>
-                    <div class="spinner-item" style="--rotate: 45deg; --bg:#10b981;"><span>$0.5</span></div>
-                    <div class="spinner-item" style="--rotate: 90deg; --bg:#4f46e5;"><span>$0.1</span></div>
-                    <div class="spinner-item" style="--rotate: 135deg; --bg:#10b981;"><span>$5</span></div>
-                    <div class="spinner-item" style="--rotate: 180deg; --bg:#4f46e5;"><span>$3</span></div>
-                    <div class="spinner-item" style="--rotate: 225deg; --bg:#10b981;"><span>$2</span></div>
-                    <div class="spinner-item" style="--rotate: 270deg; --bg:#4f46e5;"><span>$25</span></div>
-                    <div class="spinner-item" style="--rotate: 315deg; --bg:#10b981;"><span>$50</span></div>
-
-
+                    <div class="spinner-item" style="--rotate: 0deg; --bg:#6d28d9;"><span>$1</span></div>
+                    <div class="spinner-item" style="--rotate: 45deg; --bg:#3b82f6;"><span>$0.5</span></div>
+                    <div class="spinner-item" style="--rotate: 90deg; --bg:#6d28d9;"><span>$0.1</span></div>
+                    <div class="spinner-item" style="--rotate: 135deg; --bg:#3b82f6;"><span>$5</span></div>
+                    <div class="spinner-item" style="--rotate: 180deg; --bg:#6d28d9;"><span>$3</span></div>
+                    <div class="spinner-item" style="--rotate: 225deg; --bg:#3b82f6;"><span>$2</span></div>
+                    <div class="spinner-item" style="--rotate: 270deg; --bg:#6d28d9;"><span>$25</span></div>
+                    <div class="spinner-item" style="--rotate: 315deg; --bg:#3b82f6;"><span>$50</span></div>
                 </div>
                 <button id="spinButton" class="spinner-button">SPIN</button>
             </div>
 
-
-            <p class="text-center text-gray-600 mt-6">Your bonus will be applied as a discount on your first package
-                purchase.</p>
+            <p class="text-center text-white mt-6 glow-text">
+                Your bonus will be applied as a discount on your first package purchase.
+            </p>
         </div>
     </div>
+
 
     <!-- Footer -->
     <footer class="bg-darker py-12">
